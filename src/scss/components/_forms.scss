@@ -1,0 +1,163 @@
+.name {
+    display: block;
+    margin-bottom: 1em;
+
+    &.-pseudo {
+        opacity: .7;
+    }
+}
+
+.helper {
+    display: block;  
+    opacity: .7;
+}
+
+.labelfield {
+    display: block;
+}
+
+.inputfield {
+    max-width: 100%;
+    padding: 1em .5em;
+    border-radius: .5em;
+    border: 1px solid gray;
+}
+
+.basic-form,
+.error-form,
+.disabled-form,
+.helper-form,
+.icons-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+    gap: 1.5em;
+    padding: 1.5em 0;
+}
+
+.basic-form {
+    --color: blue;
+    > .inputgroup {
+        &:focus-within > .labelfield{
+            color: var(--color);
+        }
+
+        > .inputfield {
+            &:hover {
+                border-color: var(--color);
+            }
+
+            &:focus {
+                outline-color: var(--color);
+            }
+        }
+    } 
+}
+
+.error-form {
+    --color: red;
+    > .inputgroup {
+        &:focus-within > .labelfield{
+            color: var(--color);
+        }
+
+        > .inputfield {
+            &:hover {
+                border-color: var(--color);
+            }
+
+            &:focus {
+                outline-color: var(--color);
+
+                &::placeholder {
+                    color: var(--color);  
+                }
+            }
+        }
+    } 
+}
+
+.helper-form {
+    --color: red;
+    > .inputgroup {
+        &:focus-within > .labelfield{
+            color: var(--color);
+        }
+
+        > .inputfield {
+            &:hover {
+                border-color: var(--color);
+            }
+
+            &:focus {
+                outline-color: var(--color);
+
+                &::placeholder {
+                    color: var(--color);  
+                }
+
+                + .helper {
+                    color: var(--color);
+                    opacity: 1;
+                }
+            }
+        }
+    } 
+}
+
+.icons-form {
+    --color: red;
+    > .inputgroup {
+        &:focus-within > .labelfield,
+        &:focus-within > .helper {
+            color: var(--color);
+        }
+    }
+
+    > .inputgroup:first-child,
+    > .inputgroup:last-child {
+        > .inputbox {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            border: 1px solid grey;
+            border-radius: .5em;
+            padding: 1em;
+            max-width: 100%;
+            width: min-content;
+
+            > .input {
+                all: unset;
+                max-width: 75%;
+
+                &:focus {
+                    outline-color: var(--color);
+    
+                    &::placeholder {
+                        color: var(--color);  
+                    }
+
+                    + .icon {
+                        color: var(--color);
+                    }
+                }
+            }
+
+        }
+    }
+
+    > .inputgroup:last-child {
+        > .inputbox {
+            justify-content: space-between;
+        }
+    }
+}
+
+.fullwidth-form {
+    > .inputgroup {
+        > .inputfield {
+            width: 100%;
+        }
+    }
+}
+

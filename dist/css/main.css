@@ -1,0 +1,201 @@
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0;
+}
+
+.image {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+.max-wrapper {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.forms-section {
+  padding: 3em 0;
+}
+
+.name {
+  display: block;
+  margin-bottom: 1em;
+}
+.name.-pseudo {
+  opacity: 0.7;
+}
+
+.helper {
+  display: block;
+  opacity: 0.7;
+}
+
+.labelfield {
+  display: block;
+}
+
+.inputfield {
+  max-width: 100%;
+  padding: 1em 0.5em;
+  border-radius: 0.5em;
+  border: 1px solid gray;
+}
+
+.basic-form,
+.error-form,
+.disabled-form,
+.helper-form,
+.icons-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9em, 1fr));
+  gap: 1.5em;
+  padding: 1.5em 0;
+}
+
+.basic-form {
+  --color: blue;
+}
+.basic-form > .inputgroup:focus-within > .labelfield {
+  color: var(--color);
+}
+.basic-form > .inputgroup > .inputfield:hover {
+  border-color: var(--color);
+}
+.basic-form > .inputgroup > .inputfield:focus {
+  outline-color: var(--color);
+}
+
+.error-form {
+  --color: red;
+}
+.error-form > .inputgroup:focus-within > .labelfield {
+  color: var(--color);
+}
+.error-form > .inputgroup > .inputfield:hover {
+  border-color: var(--color);
+}
+.error-form > .inputgroup > .inputfield:focus {
+  outline-color: var(--color);
+}
+.error-form > .inputgroup > .inputfield:focus::-webkit-input-placeholder {
+  color: var(--color);
+}
+.error-form > .inputgroup > .inputfield:focus::-moz-placeholder {
+  color: var(--color);
+}
+.error-form > .inputgroup > .inputfield:focus:-ms-input-placeholder {
+  color: var(--color);
+}
+.error-form > .inputgroup > .inputfield:focus::-ms-input-placeholder {
+  color: var(--color);
+}
+.error-form > .inputgroup > .inputfield:focus::placeholder {
+  color: var(--color);
+}
+
+.helper-form {
+  --color: red;
+}
+.helper-form > .inputgroup:focus-within > .labelfield {
+  color: var(--color);
+}
+.helper-form > .inputgroup > .inputfield:hover {
+  border-color: var(--color);
+}
+.helper-form > .inputgroup > .inputfield:focus {
+  outline-color: var(--color);
+}
+.helper-form > .inputgroup > .inputfield:focus::-webkit-input-placeholder {
+  color: var(--color);
+}
+.helper-form > .inputgroup > .inputfield:focus::-moz-placeholder {
+  color: var(--color);
+}
+.helper-form > .inputgroup > .inputfield:focus:-ms-input-placeholder {
+  color: var(--color);
+}
+.helper-form > .inputgroup > .inputfield:focus::-ms-input-placeholder {
+  color: var(--color);
+}
+.helper-form > .inputgroup > .inputfield:focus::placeholder {
+  color: var(--color);
+}
+.helper-form > .inputgroup > .inputfield:focus + .helper {
+  color: var(--color);
+  opacity: 1;
+}
+
+.icons-form {
+  --color: red;
+}
+.icons-form > .inputgroup:focus-within > .labelfield, .icons-form > .inputgroup:focus-within > .helper {
+  color: var(--color);
+}
+.icons-form > .inputgroup:first-child > .inputbox,
+.icons-form > .inputgroup:last-child > .inputbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1em;
+  border: 1px solid grey;
+  border-radius: 0.5em;
+  padding: 1em;
+  max-width: 100%;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+}
+.icons-form > .inputgroup:first-child > .inputbox > .input,
+.icons-form > .inputgroup:last-child > .inputbox > .input {
+  all: unset;
+  max-width: 75%;
+}
+.icons-form > .inputgroup:first-child > .inputbox > .input:focus,
+.icons-form > .inputgroup:last-child > .inputbox > .input:focus {
+  outline-color: var(--color);
+}
+.icons-form > .inputgroup:first-child > .inputbox > .input:focus::-webkit-input-placeholder, .icons-form > .inputgroup:last-child > .inputbox > .input:focus::-webkit-input-placeholder {
+  color: var(--color);
+}
+.icons-form > .inputgroup:first-child > .inputbox > .input:focus::-moz-placeholder, .icons-form > .inputgroup:last-child > .inputbox > .input:focus::-moz-placeholder {
+  color: var(--color);
+}
+.icons-form > .inputgroup:first-child > .inputbox > .input:focus:-ms-input-placeholder, .icons-form > .inputgroup:last-child > .inputbox > .input:focus:-ms-input-placeholder {
+  color: var(--color);
+}
+.icons-form > .inputgroup:first-child > .inputbox > .input:focus::-ms-input-placeholder, .icons-form > .inputgroup:last-child > .inputbox > .input:focus::-ms-input-placeholder {
+  color: var(--color);
+}
+.icons-form > .inputgroup:first-child > .inputbox > .input:focus::placeholder,
+.icons-form > .inputgroup:last-child > .inputbox > .input:focus::placeholder {
+  color: var(--color);
+}
+.icons-form > .inputgroup:first-child > .inputbox > .input:focus + .icon,
+.icons-form > .inputgroup:last-child > .inputbox > .input:focus + .icon {
+  color: var(--color);
+}
+.icons-form > .inputgroup:last-child > .inputbox {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fullwidth-form > .inputgroup > .inputfield {
+  width: 100%;
+}
